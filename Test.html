@@ -3,204 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features Section</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f5f5f5;
-        }
-
-        .phase-section {
-            background-image: url('./assets/images/curve.png'); /* Path to your background image */
-            background-size: cover; /* Make sure the background image covers the entire area */
-            background-repeat: no-repeat;
-            color: #fff; /* Set text color to white for contrast */
-            padding: 50px 0;
-            text-align: center;
-            position: relative; /* For bubble positioning */
-        }
-
-        .phase-section h2 {
-            font-size: 36px;
-            margin-bottom: 30px;
-            color: #000; /* Override color for better visibility */
-        }
-
-        .phase-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .phase-card {
-            position: relative;
-            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
-            color: #000; /* Set text color to black */
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 300px;
-            text-align: left;
-            backdrop-filter: blur(5px); /* Optional: adds blur effect to background */
-            z-index: 2; /* Ensure cards are above bubbles */
-        }
-
-        .circle-number {
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #ffcd00;
-            color: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            font-weight: bold;
-            z-index: 3; /* Ensure numbers are above cards */
-        }
-
-        .phase-card h3 {
-            margin-top: 30px;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .phase-card p {
-            font-size: 16px;
-        }
-
-        /* Bubble effect */
-        .bubble {
-            position: absolute;
-            background-color: rgba(39, 49, 70, 0.5); /* Light transparent bubbles */
-            border-radius: 50%;
-            z-index: 1; /* Ensure bubbles are behind the feature cards */
-        }
-
-        .bubble1 {
-            width: 120px;
-            height: 120px;
-            top: 20%;
-            left: 30%;
-        }
-
-        .bubble2 {
-            width: 90px;
-            height: 90px;
-            top: 10%;
-            left: 50%;
-        }
-
-        .bubble3 {
-            width: 180px;
-            height: 180px;
-            top: 5%;
-            right: 20%;
-        }
-
-        .recordEarn-content {
-            display: flex; /* Use Flexbox for horizontal layout */
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 1rem;
-            position: relative; /* For bubble positioning */
-            z-index: 2; /* Ensure content is above bubbles */
-        }
-
-        .recordEarn-container {
-            background-image: url('./assets/images/curve.png');
-            text-align: center;
-            padding: 2rem; /* Add padding for spacing */
-            position: relative; /* For bubble positioning */
-        }
-
-        .record-inner {
-            padding-top: 1%;
-        }
-
-        .record-inner p {
-            font-size: 13px;
-        }
-
-        .second-container-right {
-            width: 50%;
-            display: flex; /* Center the image within this container */
-            justify-content: center;
-            align-items: center;
-        }
-
-        .second-container-left {
-            text-align: left;
-            width: 50%;
-            color: #020E26;
-        }
-
-        .second-container-left p {
-            color: #2A2A2A;
-            font-size: 13px;
-            background-color: transparent;
-            padding: 1rem 0; /* Padding for spacing */
-            margin: 0;
-            line-height: 1.6;
-        }
-    </style>
+    <title>Your Website</title>
+    <link rel="stylesheet" href="./assets/css/test.css">
 </head>
 <body>
-    <section class="phase-section">
-        <h2>Phases</h2>
-        <div class="phase-container">
-            <div class="phase-card">
-                <div class="circle-number">01</div>
-                <h3>Rules of Phase 1</h3>
-                <p>This is an INVITE-ONLY group and you have to be in line for this group AND approved by an existing
-                    member who is voted on by our NEW member committee and only 1 NEW member is approved per DAY.</p>
-            </div>
-            <div class="phase-card">
-                <div class="circle-number">02</div>
-                <h3>Rules of Phase 2</h3>
-                <p>Meet the criteria for each stage and advance to the next level.</p>
-            </div>
-            <div class="phase-card">
-                <div class="circle-number">03</div>
-                <h3>Rules of Phase 3</h3>
-                <p>Includes all Pro features plus access to borrowing funds and additional rewards.</p>
-            </div>
+    <header class="container">
+        <div class="image">
+            <img src="your-logo.png" alt="Logo">
         </div>
-        <!-- Bubble effect -->
-        <div class="bubble bubble1"></div>
-        <div class="bubble bubble2"></div>
-        <div class="bubble bubble3"></div>
-    </section>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <button>Sign Up</button>
+        </nav>
+    </header>
 
-    <!-- Second content section -->
-    <div class="recordEarn-container">
-        <div class="recordEarn-content">
-            <div class="second-container-left record-inner">
-                <h1 style="color:#F6F5FA;">Record and Earn</h1>
-                <p style="color:#F6F5FA;">Enhance your trading skills without risking actual capital. Our Demo Trader feature allows you to
-                    simulate trades using real-time market data, enabling you to place orders and closely monitor your
-                    performance. Analyze your trades to identify areas for improvement and build confidence before
-                    stepping into the live market.</p>
-                <p style="color: white;">Experience advanced practice with thorough trade tracking. Demo Trader offers more than just trade
-                    simulations—it provides robust analysis tools. Review historical performance data, assess your
-                    win/loss ratio, and visualize trade effectiveness through detailed reports. This in-depth insight
-                    allows you to refine your strategies and spot profitable trends, ensuring you are well-prepared
-                    before committing real capital.</p>
+    <div class="main_container container">
+        <div class="left">
+            <h1>Welcome to Our Website</h1>
+            <p class="leftp">We provide the best solutions for your business needs.</p>
+            <div class="insideleft">
+                <h1>Explore Our Services</h1>
+            </div>
+            <button>Learn More</button>
+        </div>
+        <div class="image-container">
+            <img src="main-image.png" alt="Main Image" class="image1">
+            <div class="trade">
+                <img src="trade-icon.png" alt="Trade">
+                <span>Trade with us</span>
+            </div>
+            <div class="percentage">Save 50%</div>
+        </div>
+    </div>
+
+    <section class="second-container container">
+        <h1>Our Services</h1>
+        <p class="subtitle">We offer a wide range of services to meet your needs.</p>
+        <div class="second-content">
+            <div class="second-container-left">
+                <p>Service 1 Description</p>
+                <p>Service 2 Description</p>
             </div>
             <div class="second-container-right">
-                <img src="./assets/images/photo.png" width="60%" style="padding-top: 7%;" height="70%" alt="mobile-phone">
+                <img src="services-image.png" alt="Services">
             </div>
         </div>
-        <!-- Bubble effect -->
-        <div class="bubble bubble1"></div>
-        <div class="bubble bubble2"></div>
-        <div class="bubble bubble3"></div>
-    </div>
+    </section>
+
+    <section class="features-section container">
+        <h2>Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <h3>Feature 1</h3>
+                <p>Feature 1 Description</p>
+            </div>
+            <div class="feature-card">
+                <h3>Feature 2</h3>
+                <p>Feature 2 Description</p>
+            </div>
+            <!-- Add more feature cards as needed -->
+        </div>
+    </section>
+
+    <section class="recordEarn-container container">
+        <h2>Record and Earn</h2>
+        <div class="record-inner">
+            <p>Earn rewards by recording your activities with us.</p>
+        </div>
+        <div class="recordEarn-content">
+            <div class="record-left">
+                <p>Record your activities</p>
+            </div>
+            <div class="record-right">
+                <p>Earn rewards</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="phase-section container">
+        <h2>Our Phases</h2>
+        <div class="phase-container">
+            <div class="phase-card">
+                <div class="circle-number">1</div>
+                <h3>Phase 1</h3>
+                <p>Phase 1 Description</p>
+            </div>
+            <div class="phase-card">
+                <div class="circle-number">2</div>
+                <h3>Phase 2</h3>
+                <p>Phase 2 Description</p>
+            </div>
+            <!-- Add more phase cards as needed -->
+        </div>
+    </section>
+
+    <section class="aboutus-container container">
+        <div class="aboutus-container-left">
+            <h2>About Us</h2>
+            <p>We are a team of professionals dedicated to providing top-notch solutions for your business needs.</p>
+        </div>
+        <div class="aboutus-right">
+            <h2>Our Story</h2>
+            <p>Our journey started with a simple idea...</p>
+            <img src="aboutus-image.png" alt="About Us">
+        </div>
+    </section>
+
+    <section class="newsletter-section container">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with the latest news and offers.</p>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </section>
+
+    <footer class="footer-section container">
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <a href="#privacy-policy">Privacy Policy</a>
+        <a href="#terms-of-service">Terms of Service</a>
+    </footer>
 </body>
 </html>

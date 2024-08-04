@@ -4,7 +4,9 @@ for font size, %, VW and VH are mainly used for margins, padding, spacing and wi
 
 Use Cases: 'px' is suitable for defining specific dimensions for elements that require fixed sizes, such as borders, margins, and fonts. On the other hand, 'vh' is preferred for creating 
 responsive layouts, especially for elements like headers, hero sections, or full-screen backgrounds.
-
+ font-awesome kit 
+ <script src="https://kit.fontawesome.com/64b17fb22b.js" crossorigin="anonymous"></script>
+ 
 
 /* Bubble effect */
 .footer-bubbles {
