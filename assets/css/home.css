@@ -22,15 +22,24 @@ body {
 /* Header CSS */
 header {
     background-color: #FFFFFF;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 10px 0;
     border-bottom: 1px solid #E0E0E0;
     color: #2A2A2A;
     box-shadow: 0px 4px 25px 0px #00000026;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
     width: 100%;
 }
 
@@ -45,6 +54,7 @@ header nav {
 
 #menu-icon-container {
     display: none;
+    margin-right: 20px; /* Add margin from the right side */
 }
 
 header nav #menu-icon {
@@ -64,7 +74,7 @@ header nav #nav-links a {
     color: #2A2A2A;
     font-weight: lighter;
     font-family: GeneralSans-Regular;
-    white-space: nowrap;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 header nav #nav-links button {
@@ -74,17 +84,14 @@ header nav #nav-links button {
     padding: 10px 20px;
     color: #2A2A2A;
     cursor: pointer;
-    white-space: nowrap;
+    white-space: nowrap; /* Prevent button text from wrapping */
 }
 
-/* Main content CSS */
+/* First Container CSS */
 .main_container {
     display: flex;
     justify-content: space-between;
-    padding: 50px 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-    width: 100%;
+    padding: 150px 20px 50px 20px;
     background-color: #F6F5FA;
 }
 
@@ -102,6 +109,7 @@ header nav #nav-links button {
 .leftp {
     font-size: 1.0em;
     color: #777;
+    font-size: 15px;
     width: 70%;
     margin: 20px 0;
 }
@@ -154,7 +162,7 @@ header nav #nav-links button {
     cursor: pointer;
     position: absolute;
     top: 40px;
-    left: -70px;
+    left: 20px; /* Adjusted margin */
     width: 60%;
     height: 20%;
     background-color: #FFF;
@@ -193,13 +201,12 @@ button {
 @media (max-width: 768px) {
     header {
         justify-content: space-between;
-        flex-wrap: wrap;
     }
 
-    header .image {
-        margin-left: 0;
+    .header-container {
+        padding: 0 10px; /* Adjust padding for smaller screens */
     }
-   
+
     #menu-icon-container {
         display: block;
     }
@@ -222,9 +229,9 @@ button {
         padding: 10px;
         position: absolute;
         top: 50px;
-        right: 20px;
+        right: 10px;
         z-index: 10;
-        width: max-content;
+        width: max-content; /* Menu width adjusts to its content */
     }
 
     header nav #nav-links a {
@@ -239,23 +246,18 @@ button {
         display: flex;
     }
 
+    .trade {
+        left: 20px; /* Ensure proper margin on smaller screens */
+    }
+
     .main_container {
         flex-direction: column;
         align-items: center;
-        padding: 20px;
+        padding: 150px 10px 50px 10px; /* Adjust padding for smaller screens */
     }
 
     .left, .right {
-        width: 100%;
         margin: 0;
-    }
-
-    .insideleft {
-        width: 100%;
-    }
-
-    .image-container {
-        margin: 20px 0;
     }
 }
 
