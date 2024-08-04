@@ -1,0 +1,6 @@
+git init 
+git add .
+git commit -m "message here"
+git push origin main(branch-name)
+
+git checkout -b branch-name
