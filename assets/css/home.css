@@ -29,6 +29,9 @@ header {
     border-bottom: 1px solid #E0E0E0;
     color: #2A2A2A;
     box-shadow: 0px 4px 25px 0px #00000026;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 header .image {
@@ -61,7 +64,7 @@ header nav #nav-links a {
     color: #2A2A2A;
     font-weight: lighter;
     font-family: GeneralSans-Regular;
-    white-space: nowrap; /* Prevent text from wrapping */
+    white-space: nowrap;
 }
 
 header nav #nav-links button {
@@ -71,38 +74,132 @@ header nav #nav-links button {
     padding: 10px 20px;
     color: #2A2A2A;
     cursor: pointer;
-    white-space: nowrap; /* Prevent button text from wrapping */
+    white-space: nowrap;
 }
-/*  changes for header to the previous 
-Preventing Text Wrapping:
 
-Added white-space: nowrap; to the header nav #nav-links a and header nav #nav-links button styles to ensure that the text within the navigation links and the button does not wrap to the next line.
-Header Alignment:
+/* Main content CSS */
+.main_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #F6F5FA;
+}
 
-Updated header style to justify-content: space-between to ensure the logo is aligned to the left and the menu icon is aligned to the right.
-Responsive Navigation Menu:
+.left {
+    flex: 1;
+    margin-right: 20px;
+}
 
-For mobile screens (@media (max-width: 768px)):
-Set #menu-icon-container to display: block so it appears on mobile.
-Set header nav #menu-icon to display: block to show the menu icon.
-The navigation links container (header nav #nav-links) is initially set to display: none to hide it until the menu icon is clicked.
-When the active class is added, header nav #nav-links.active is set to display: flex to show the menu.
-Added width: max-content to #nav-links to ensure the menu width adjusts according to its content and does not stretch across the full screen.
-Set the position of the menu to absolute and adjusted top and right to align it correctly when opened.
+.left h1 {
+    font-size: 2.1em;
+    color: #333;
+    font-family: Gilroy-Bold;
+}
 
-*/
+.leftp {
+    font-size: 1.0em;
+    color: #777;
+    width: 70%;
+    margin: 20px 0;
+}
 
+.insideleft {
+    width: 40%;
+}
+
+.insideleft h1 {
+    color: #232323;
+    font-family: Gilroy-Bold;
+    font-size: 44px;
+    font-weight: 400;
+}
+
+.left button {
+    background-color: #FFA500;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #2A2A2A;
+    cursor: pointer;
+}
+
+.image1 {
+    width: 250px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    background-color: #131E35;
+    margin-right: 60px;
+}
+
+.trade {
+    background-color: #FFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    font-family: Gilroy-Bold;
+    font-size: 15.87px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    left: -70px;
+    width: 60%;
+    height: 20%;
+    background-color: #FFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.trade img {
+    margin-right: 10px;
+}
+
+.percentage {
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 5px 10px;
+    z-index: 2;
+    width: 30%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    background-color: #F8A601;
+    border-color: #F8A601;
+    border-radius: 4px;
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
     header {
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     header .image {
         margin-left: 0;
     }
-
+   
     #menu-icon-container {
         display: block;
     }
@@ -127,7 +224,7 @@ Set the position of the menu to absolute and adjusted top and right to align it 
         top: 50px;
         right: 20px;
         z-index: 10;
-        width: max-content; /* Menu width adjusts to its content */
+        width: max-content;
     }
 
     header nav #nav-links a {
@@ -140,6 +237,25 @@ Set the position of the menu to absolute and adjusted top and right to align it 
 
     header nav #nav-links.active {
         display: flex;
+    }
+
+    .main_container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .left, .right {
+        width: 100%;
+        margin: 0;
+    }
+
+    .insideleft {
+        width: 100%;
+    }
+
+    .image-container {
+        margin: 20px 0;
     }
 }
 
