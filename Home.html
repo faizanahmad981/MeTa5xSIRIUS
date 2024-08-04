@@ -9,10 +9,16 @@
 </head>
 <body>
     <header>
+
+        <!-- 
+Menu Icon Container:
+Moved the <div id="menu-icon-container"> to the <nav> element to keep it within the navigation context.
+Ensured the icon itself has an ID for easier JavaScript manipulation.
+         -->
         <img class="image" src="./assets/images/image1.png" alt="Header Image" />
         <nav>
             <div id="menu-icon-container">
-                <i class="fa-solid fa-bars" style="width: 0.313rem; height:0.002rem;" id="menu-icon"></i>
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
             </div>
             <div id="nav-links">
                 <a href="#">Home</a>
