@@ -50,11 +50,13 @@ header .image {
 header nav {
     display: flex;
     align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 #menu-icon-container {
     display: none;
-    margin-right: 20px; /* Add margin from the right side */
 }
 
 header nav #menu-icon {
@@ -66,6 +68,8 @@ header nav #menu-icon {
 header nav #nav-links {
     display: flex;
     align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
 }
 
 header nav #nav-links a {
@@ -85,6 +89,7 @@ header nav #nav-links button {
     color: #2A2A2A;
     cursor: pointer;
     white-space: nowrap; /* Prevent button text from wrapping */
+    margin-left: auto; /* Aligns the button to the right */
 }
 
 /* First Container CSS */
@@ -93,6 +98,8 @@ header nav #nav-links button {
     justify-content: space-between;
     padding: 150px 20px 50px 20px;
     background-color: #F6F5FA;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .left {
